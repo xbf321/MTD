@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <item key="site-top-logo-link-text"><![CDATA[<a href="/" title="机械发展科技股份有限公司--创新、优质、用户满意"><img src="/images/top_bar.jpg" alt="机械发展科技股份有限公司--创新、优质、用户满意" /></a>]]></item>
+    <item key="current-text">您所在的位置</item>
+    <item key="channel-sub-nav-home-text">首页</item>
+    <item key="article-publish-date-text">发布时间</item>
+    <item key="more-text">更多</item>
+    <item key="site-top-nav-text">
+        <![CDATA[<a href="/en">English</a> | <a href="javascript:void(0);" onclick="bookmark('机科发展科技股份有限公司','http://www.mtd.com.cn');return false;">加入收藏</a> | <a href="http://59.108.75.37" target="_blank">OA系统</a> | <a href="http://mail.mtd.com.cn" target="_blank">邮箱</a>]]>
+    </item>
+    <item key="footer-text">
+        <![CDATA[<p class="footer_logo"><img src="/images/logo.jpg" /></p><p class="footer_info">Copyright 版权所有：机科发展科技股份有限公司<br />地址：北京市海淀区首体南路2号<br />备案号：京ICP备09075358号</p><p class="copright_map"><a href="/channel/92.html">版权声明</a> | <a href="/channel/93.html">网站地图</a> | <a href="/channel/94.html">联系我们</a></p>]]>
+    </item>
+    <item key="footer-friendlink-text">
+        <![CDATA[<div class="links_bar">
+            友情链接：
+            <select id="ddlLink1">
+                <option selected="selected" value="0">发起人</option>
+                <option value="http://www.cam.com.cn">机械科学研究院</option>
+                <option value="0">北京市大地科技实业总公司</option>
+                <option value="http://www.xj-tianye.com/">新疆天业（集团）有限公司</option>
+                <option value="http://www.cisri.com/">钢铁研究总院</option>
+                <option value="http://www.caams.org.cn/">中国农业机械化科学研究院</option>
+                <option value="http://www.bgrimm.com/">北京矿冶研究总院</option>
+            </select>
+            <select id="ddlLink2">
+                <option selected="selected" value="0">事业部</option>
+                <option value="http://www.mtdep.com/">环境与生态工程事业部 </option>
+                <option value="http://www.mtd.com.cn/ct/index.html">成套技术与装备事业部</option>
+                <option value="http://www.riamt.com/">自动检测装备事业部</option>
+                <option value="/channel/98.html">智能输送和包装机械事业部</option>
+                <option value="/channel/99.html">北京分公司</option>
+            </select>
+            <select id="ddlLink3">
+                <option selected="selected" value="0">友情链接</option>
+                <option value="http://www.sdpc.gov.cn/">国家发改委</option>
+                <option value="http://www.most.gov.cn/">国家科技部</option>
+                <option value="http://www.sasac.gov.cn/">国有资产监督管理委员会</option>
+                <option value="http://www.ccgp.gov.cn/">中国政府采购网</option>
+                <option value="http://www.chinabidding.com/">中国采购与招标网</option>
+                <option value="http://www.cec.gov.cn/">中国招标投标网</option>
+                <option value="http://www.china-machine.com/">中国机械</option>
+                <option value="http://www.mei.gov.cn/">中国机械工业联合会</option>
+                <option value="http://www.machineinfo.com/">中国机械信息网</option>
+                <option value="http://www.zgc.gov.cn/">中关村管委会</option>
+                <option value="http://www.lianmao.com.cn/">联贸网</option>
+            </select>
+        </div>
+        <div class="liuydown_bar">
+            <a href="/feedback">
+                <img src="/images/liuy_btn.jpg" alt="在线留言" /></a><a href="/feedback/advise"><img src="/images/tous_btn.jpg"
+                    alt="投诉建议" /></a><a href="/survey/20111212.html"><img src="/images/wenj_btn.jpg" alt="问卷调查" /></a><a
+                        href="/download/list"><img src="/images/xiaz_btn.jpg" alt="相关下载" /></a></div>]]></item>
+</root>

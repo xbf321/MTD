@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "修改密码";
+    Layout = "../Shared/_Layout.cshtml";
+}
+<fieldset>
+    <legend>修改密码</legend>
+    @Html.ValidationSummary()
+    @if (ViewBag.Msg != null)
+    {
+        <div class="success">@Html.Raw(ViewBag.Msg)</div>
+    }
+    <form method="post">
+        <table>
+            <tr>
+                <th align="right">原始密码：</th>
+                <td>@Html.Password("txtoldPwd")</td>
+            </tr>
+            <tr>
+                <th align="right">新密码：</th>
+                <td>@Html.Password("txtNewPwd")</td>
+            </tr>
+            <tr>
+                <th align="right">确认新密码：</th>
+                <td>@Html.Password("txtNewConfirmPwd")</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="修改" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">注：密码至少六位字符</td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+

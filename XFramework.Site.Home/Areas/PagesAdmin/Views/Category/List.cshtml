@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "类别列表";
+}
+@section header{
+    <style type="text/css">
+        #catTree ul{padding-left:15px; list-style:disc;}
+        #catTree ul li{ line-height:20px;}
+    </style>
+}
+<fieldset>
+    <legend>类别列表</legend>
+    <table>
+        <tr>
+            <th>请选择语言：</th>
+            <td><select id="ddlLang">
+                <option value="0">==请选择==</option>
+                <option value="-1">中文</option>
+                <option value="-2">英文</option>
+            </select>&nbsp;&nbsp;<a href="add">添加类别</a></td>
+        </tr>
+        <tr>
+            <td id="catTree" colspan="2"></td>
+        </tr>
+    </table>
+</fieldset>
+@section footer{
+    <script type="text/javascript">
+        KISSY.ready(function (S) {
+            var DOM = S.DOM, Event = S.Event, ddlLang = DOM.get('#ddlLang'),lang = @(Controleng.Common.CECRequest.GetQueryInt("lang", 0));
+            
+            Event.on(ddlLang, "change", function () {
+                var lang = this.value;
+                loadTree(lang);
+            });
+            S.each(ddlLang,function(item,i){
+                if(item.value == lang){
+                    DOM.attr(item,"selected",true);
+                }
+            });
+            loadTree(lang);
+        });
+        window.loadTree = function(lang){
+            KISSY.io.post("Ajax", { m: "treelist",lang:lang }, function (d) {
+                    KISSY.one('#catTree').html(d);
+            });
+        }
+    </script>
+}
+

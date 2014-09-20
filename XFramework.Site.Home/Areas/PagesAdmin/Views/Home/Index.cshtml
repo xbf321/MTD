@@ -1,0 +1,36 @@
+﻿@using System.Text;
+@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "系统首页";
+
+/*
+    StringBuilder sb = new StringBuilder();
+    // Get cookie from the current request.
+    HttpCookie cookie = Request.Cookies.Get("mm");
+    // Check if cookie exists in the current request.
+    if (cookie == null)
+    {
+        sb.Append("Cookie was not received from the client. ");
+        sb.Append("Creating cookie to add to the response. <br/>");
+        // Create cookie.
+        cookie = new HttpCookie("mm");
+        // Set value of cookie to current date time.
+        cookie.Value = "mypsr";
+        // Set cookie to expire in 10 minutes.
+        cookie.Expires = DateTime.Now.AddMinutes(10d);
+        // Insert the cookie in the current HttpResponse.
+        //Response.Cookies.Add(cookie);
+    }
+    else
+    {
+        sb.Append("Cookie retrieved from client. <br/>");
+        sb.Append("Cookie Name: " + cookie.Name + "<br/>");
+        sb.Append("Cookie Value: " + cookie.Value + "<br/>");
+        sb.Append("Cookie Expiration Date: " +
+            cookie.Expires.ToString() + "<br/>");
+    }*/
+
+    //Response.Cookies.Add(new HttpCookie(System.Web.Security.FormsAuthentication.FormsCookieName){Value = DateTime.Now.ToString()});
+    
+}
+系统首页

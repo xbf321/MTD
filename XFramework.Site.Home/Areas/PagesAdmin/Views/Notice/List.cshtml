@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+    ViewBag.Title = "公告管理";
+
+    var noticeInfo = ViewBag.NoticeInfo;
+    string title = noticeInfo.Item1;
+    string url = noticeInfo.Item2;
+    int sort = noticeInfo.Item3;
+}
+<fieldset>
+    <legend>公告管理</legend>
+    <form method="post">
+    <table width="100%">
+        <tr>
+            <td align="right"><a href="?" class="btn-add">新建公告</a></td>
+        </tr>
+    </table>
+    @Html.ValidationSummary()
+    <table>
+        <tr>
+            <th>
+                标题：
+            </th>
+            <td>@Html.TextBox("title", title)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                链接：
+            </th>
+            <td>@Html.TextBox("url", url)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                排序：
+            </th>
+            <td>@Html.TextBox("sort", sort)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="保存" />
+            </td>
+        </tr>
+    </table>
+    </form>
+    <table class="tblist" width="100%">
+        <tr>
+            <th>
+                标题
+            </th>
+            <th>
+                链接
+            </th>
+            <th width="10%">
+                排序
+            </th>
+            <th width="15%">
+                操作
+            </th>
+        </tr>
+        @foreach (var item in ViewBag.NoticeList)
+        {
+            <tr>
+                <td>@item.Item1
+                </td>
+                <td>@item.Item2
+                </td>
+                <td>@item.Item3
+                </td>
+                <td>
+                    <a href="?guid=@(item.Item4)">编辑</a>|<a href="javascript:void(0);" onclick="del('@(item.Item4)');">删除</a>
+                </td>
+            </tr>
+        }
+    </table>
+</fieldset>
+<script type="text/javascript">
+    function del(guid) {
+        if (window.confirm('确定？')) {
+            window.location.href = '?m=delete&guid=' + guid;
+            return false;
+        }
+        return false;
+    }
+</script>

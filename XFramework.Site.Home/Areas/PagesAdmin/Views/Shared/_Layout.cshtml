@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <style type="text/css">
+        body{font-size:12px;font-family:"Verdana";margin:0;padding:0;}
+        a,a:hover{text-decoration:none;}
+        a{color:#000;}
+        a:hover{color:red;text-decoration:underline;}
+        input,textarea{font-size:12px;}
+        ul{list-style:none outside none;margin:0;padding:0;}
+        .clear{clear:both;}
+        .ks-tab{position:relative;padding-top:29px;}
+        .ks-tab .ks-switchable-nav{position:absolute;left:20px;margin-top:-29px;z-index:99;}
+        .ks-tab .ks-switchable-nav li{background-color:#E5EEF7;border:1px solid #CCC;color:#484853;float:left;letter-spacing:1px;position:relative;border-bottom:1px solid #AEC7E5;font-size:14px;text-align:center;cursor:pointer;padding:5px 10px;}
+        .ks-tab .ks-switchable-nav li.ks-active{background-color:#FFF;border-bottom:1px solid #FFF;cursor:default;font-weight:700;letter-spacing:0;background-position:0 -40px;padding:5px 10px;}
+        .ks-tab .ks-switchable-content{position:relative;border:1px solid #AEC7E5;padding:20px;}
+        .success{font-size:14px;font-weight:700;color:#404040;border:1px solid #ddd;line-height:22px;background-color:#f0ffe5;border-color:#4dbf00;padding:17px 10px 17px 56px;}
+        .field-validation-error{color:red;}
+        .input-validation-error{border:1px solid red;background-color:#fee;}
+        .validation-summary-errors{font-weight:700;color:red;display:block;border:1px red dotted;padding:10px;}
+        .tblist{border-top:1px solid #ddd;}
+        .tblist .tdcenter{text-align:center;}
+        .tblist tr th{background:#f8f8f8;line-height:25px;border-bottom:1px solid #ddd;padding:0 15px;}
+        .tblist tr td{background:#fff;line-height:25px;border-bottom:1px solid #ddd;padding:0 15px;}
+        .tblist tr.odd td{background:#fbfbfb;}
+        .tblist tr:hover td{background:#fdfcf6;}
+        .tblist .action{text-align:right;padding:0 20px 0 10px;}
+        .tblist tr .action a{text-decoration:none;color:#9b9b9b;margin:0 0 0 10px;}
+        .tblist tr:hover .action .edit{color:#c5a059;}
+        .tblist tr:hover .action .delete{color:#a02b2b;}
+        .tblist tr:hover .action .view{color:#55a34a;}
+        .tblist tr:hover .action a:hover{text-decoration:underline;}
+        .btn-add{border:1px solid #ddd;display:block;width:60px;height:18px;background-color:Gray;color:#fff;font-weight:700;padding:5px 10px;}
+        .tip{color:Red;margin-left:10px;font-weight:700;margin-right:10px;}
+        #page-content{padding:10px;}
+        .field-validation-valid,.validation-summary-valid{display:none;}
+    </style>
+    <script src="/Scripts/kissy/1.2.0/kissy-min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function insertImage(obj, url) {
+            KISSY.DOM.val('#' + obj, url);
+        }
+        function openWindow(g, c, a, b) { var e = (screen.width - c) / 2 - b, f = (screen.height - a) / 2 - b, d = window.open(g, "_blank", "width=" + c + ",height=" + a + ",toolbars=0,resizable=1,left=" + e + ",top=" + f); d.focus() }
+    </script>
+    @RenderSection("header", false)
+</head>
+<body>
+    <div id="page-content">
+        @RenderBody()
+    </div>
+    @RenderSection("footer", false)
+</body>
+</html>

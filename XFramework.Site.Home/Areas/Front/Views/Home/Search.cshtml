@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+
+    var q = Controleng.Common.CECRequest.GetQueryString("q");
+    ViewBag.Title = string.Format("{0} - 搜索结果",q);
+}
+@section header{
+    <style type="text/css">
+        #adBlock{ display:none;}
+    </style>
+    <script>
+        (function () {
+            var cx = '010879423997412859211:--p8apvz67o';
+            var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+}
+<div class="main">
+    <gcse:search></gcse:search>
+</div>

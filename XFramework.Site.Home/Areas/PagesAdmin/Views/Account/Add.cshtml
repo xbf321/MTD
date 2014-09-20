@@ -1,0 +1,41 @@
+﻿@model XFramework.Model.UserInfo
+@{
+    ViewBag.Title = "添加管理员";
+    Layout = "../Shared/_Layout.cshtml";
+}
+<fieldset>
+    <legend>添加管理员</legend>
+    @Html.ValidationSummary()
+    @if (ViewBag.Msg != null)
+    {
+        <div class="success">@Html.Raw(ViewBag.Msg)</div>
+    }
+    <form method="post" action="">
+    <table>
+        <tr>
+            <th>
+                Email：
+            </th>
+            <td>@Html.TextBoxFor(m => m.UserName)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                密码：
+            </th>
+            <td>@Html.PasswordFor(m => m.UserPwd)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="submit" value="保存" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">注：密码至少六位字符</td>
+        </tr>
+    </table>
+    </form>
+</fieldset>
